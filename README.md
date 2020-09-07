@@ -1,4 +1,4 @@
-# Locally non-negative pursuit (LNP) for learning sparse convex representation
+# Locally non-negative pursuit (LNP) method for learning sparse convex representation
 This is the official matlab implementation of AAAI'14 paper LNP:
 
 [A local non-negative pursuit method for intrinsic manifold structure preservation](http://legacy.machineilab.org/users/chendongdong/papers/aaai14_lnp.pdf).
@@ -35,12 +35,12 @@ Manifold learning, Neighbors selection, Structure preservation, Sparse convex re
 0. download the datasets (the duck images are already included in this source))
 
 ### Usage
-0. To get started with LNP, please run the example [/Motivation/NeighborhorSelection_LNP.m](https://github.com/edongdongchen/Locally-Nonnegative-Pursuit/blob/master/Motivation/NeighborhorSelection_LNP.m) to illustrate the neighborhood selection strategy of LNP. It is a lovely example to see how the LNP works.
+0. To get started, please run the example [/Motivation/NeighborhorSelection_LNP.m](https://github.com/edongdongchen/Locally-Nonnegative-Pursuit/blob/master/Motivation/NeighborhorSelection_LNP.m) by which can illustrate the procedures of selecting neighbours using LNP. It is a lovely example to see how the LNP works.
 0. Run the example [/COIL20-duck-experiment/test_coil20_ducks.m](https://github.com/edongdongchen/Locally-Nonnegative-Pursuit/blob/master/COIL20-duck-experiment/test_coil20_ducks.m) on COIL-20. The results show the efficiency of LNP. 
 #### The core functions:
-0. [lnp_once.m](https://github.com/edongdongchen/Locally-Nonnegative-Pursuit/blob/master/COIL20-duck-experiment/lnp_once.m): given a data point 'b', this function will select the corresponding 'A_opt' from its initial K (big in value) nearest neighborhood
-0. [affine_rep.m](https://github.com/edongdongchen/Locally-Nonnegative-Pursuit/blob/master/COIL20-duck-experiment/affine_rep.m): given a data point 'b', this function will caculate the affine representation of 'b' over 'A_opt'/'KNN'/or 'A'
-0. [lnp.m](https://github.com/edongdongchen/Locally-Nonnegative-Pursuit/blob/master/COIL20-duck-experiment/lnp.m): given a dataset 'A' (matrix), this function will compute the SCRs (sparse convex representations) for each data point (column in 'A')
+0. [lnp_once.m](https://github.com/edongdongchen/Locally-Nonnegative-Pursuit/blob/master/COIL20-duck-experiment/lnp_once.m): given a data point 'b', this function will select the corresponding 'A_opt' from its initial K (big in value) nearest neighborhood (KNN).
+0. [affine_rep.m](https://github.com/edongdongchen/Locally-Nonnegative-Pursuit/blob/master/COIL20-duck-experiment/affine_rep.m): given a data point 'b', this function will caculate the affine representation of 'b' over 'A_opt'/'KNN'/or 'A'.
+0. [lnp.m](https://github.com/edongdongchen/Locally-Nonnegative-Pursuit/blob/master/COIL20-duck-experiment/lnp.m): given a dataset 'A' (matrix), this function will compute the SCRs (sparse convex representations) for each data point (column in 'A'). 
 
 ### Results on COIL20
 
